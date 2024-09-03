@@ -1,18 +1,15 @@
 ﻿@page
+@using System.Diagnostics
 @model HellowRazor.Pages.ProcessModel
 @{
-    // c# island
-    string[] people = { "john", "yes", "jill"};
+    Process[] procs = ViewData["Procs"] as Process[];
 }
 
 
 <div>
     <h2>Process Page</h2>
-    <h4>@ViewData["Yes"]</h4>
-    <ul>
-        @foreach (var person in people)
-        {
-            <li>@person</li>
-        }
-    </ul>
+    @foreach (var p in procs)
+    {
+        <div>@p.ProcessName</div>
+    }
 </div>

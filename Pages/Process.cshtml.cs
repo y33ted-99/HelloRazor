@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Diagnostics;
 
 namespace HellowRazor.Pages
 {
@@ -7,7 +8,8 @@ namespace HellowRazor.Pages
     {
         public void OnGet()
         {
-            ViewData["Yes"] = "hellow";
+            var Procs = Process.GetProcesses();
+            ViewData["Procs"] = Procs;
         }
     }
 }
