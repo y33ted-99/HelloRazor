@@ -1,0 +1,18 @@
+﻿@page
+@model HellowRazor.Pages.ProcessModel
+@{
+    // c# island
+    string[] people = { "john", "yes", "jill"};
+}
+
+
+<div>
+    <h2>Process Page</h2>
+    <h4>@ViewData["Yes"]</h4>
+    <ul>
+        @foreach (var person in people)
+        {
+            <li>@person</li>
+        }
+    </ul>
+</div>
